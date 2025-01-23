@@ -1,0 +1,30 @@
+* {
+  font-size: 16px;
+  scrollbar-width: thin;
+  font-family: "Roboto", sans-serif !important;
+  color: var(--foreground);
+}
+
+*:not(h1, h2, h3, h4, h5, h6) {
+  color: #171717;
+}
+
+body {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  flex-basis: auto;
+  margin: 0;
+}
+body nav {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  background-color: white;
+}
+body nav .scroll-bar hr {
+  height: 3px;
+  color: #a1a19c;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../sass/all.scss%22,%22../sass/admin/navbar.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;EACI;EACA;EACA;EACA;;;AAGJ;EACI;;;AAGJ;EACI;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;EACA;EACA;;ACxBR;EACI;EACA%22,%22file%22:%22all.css%22%7D */
