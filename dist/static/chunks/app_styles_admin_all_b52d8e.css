@@ -1,0 +1,77 @@
+/* [project]/app/styles/admin/all.css [app-client] (css) */
+* {
+  font-size: 16px;
+  scrollbar-width: thin;
+  color: var(--foreground);
+  font-family: Roboto, sans-serif !important;
+}
+
+:not(h1, h2, h3, h4, h5, h6) {
+  color: #171717;
+}
+
+body {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  flex-basis: auto;
+  margin: 0;
+  background-color: var(--bodybg-color);
+}
+
+.text-tree-line {
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  visibility: visible;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 1 !important;
+}
+
+nav {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  background-color: #fff;
+}
+
+nav .scroll-bar .nav-bar hr {
+  height: 3px;
+  color: #a1a19c;
+}
+
+.drawer-cart > .MuiDrawer-paper {
+  max-height: 450px;
+  border-radius: 1rem;
+  margin-top: var(--margin1);
+}
+
+.drawer-cart > .MuiDrawer-paper .cart-item {
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.drawer-cart > .MuiDrawer-paper .cart-item:hover {
+  background-color: var(--color1);
+}
+
+.drawer-cart > .MuiDrawer-paper .cart-item .icon-delete-cart {
+  transition: all .3s ease-in-out;
+}
+
+.drawer-cart > .MuiDrawer-paper .cart-item .icon-delete-cart:hover * {
+  color: var(--color-main);
+}
+
+.top-bar {
+  height: var(--margin1);
+  max-height: var(--margin1);
+}
+
+.content-all {
+  margin-top: var(--margin1);
+}
+
+/*# sourceMappingURL=app_styles_admin_all_b52d8e.css.map*/

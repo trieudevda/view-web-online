@@ -1,0 +1,30 @@
+* {
+    font-size: 16px;
+    scrollbar-width: thin;
+    font-family: 'Roboto', sans-serif !important;
+    color: var(--foreground);
+}
+
+*:not(h1, h2, h3, h4, h5, h6) {
+    color: #171717;
+}
+
+body {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    flex-basis: auto;
+    margin: 0;
+    background-color: var(--bodybg-color);
+}
+.text-tree-line{
+    display: block; /* Fallback trong trường hợp trình duyệt không hỗ trợ display dạng box */
+    display: -webkit-box;
+    line-height: 1 !important; /* Fallback  */
+    // max-height: 74px; /* Fallback số dòng bạn muốn giới hạn */
+    -webkit-line-clamp: 3; /* Số dòng bạn muốn giới hạn */
+    -webkit-box-orient: vertical;
+    visibility: visible;
+    text-overflow: ellipsis;
+    overflow:hidden;
+}

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-size: 16px;
   scrollbar-width: thin;
@@ -15,16 +16,57 @@ body {
   flex-wrap: nowrap;
   flex-basis: auto;
   margin: 0;
+  background-color: var(--bodybg-color);
 }
-body nav {
+
+.text-tree-line {
+  display: block; /* Fallback trong trường hợp trình duyệt không hỗ trợ display dạng box */
+  display: -webkit-box;
+  line-height: 1 !important; /* Fallback  */
+  -webkit-line-clamp: 3; /* Số dòng bạn muốn giới hạn */
+  -webkit-box-orient: vertical;
+  visibility: visible;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+nav {
   position: relative;
   width: 100%;
   max-width: 300px;
   background-color: white;
 }
-body nav .scroll-bar hr {
+nav .scroll-bar .nav-bar hr {
   height: 3px;
   color: #a1a19c;
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../sass/all.scss%22,%22../sass/admin/navbar.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;EACI;EACA;EACA;EACA;;;AAGJ;EACI;;;AAGJ;EACI;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;EACA;EACA;;ACxBR;EACI;EACA%22,%22file%22:%22all.css%22%7D */
+.drawer-cart > .MuiDrawer-paper {
+  max-height: 450px;
+  border-radius: 1rem;
+  margin-top: var(--margin1);
+}
+.drawer-cart > .MuiDrawer-paper .cart-item {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.drawer-cart > .MuiDrawer-paper .cart-item:hover {
+  background-color: var(--color1);
+}
+.drawer-cart > .MuiDrawer-paper .cart-item .icon-delete-cart {
+  transition: all 0.3s ease-in-out;
+}
+.drawer-cart > .MuiDrawer-paper .cart-item .icon-delete-cart:hover * {
+  color: var(--color-main);
+}
+
+.top-bar {
+  height: var(--margin1);
+  max-height: var(--margin1);
+}
+
+.content-all {
+  margin-top: var(--margin1);
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../sass/admin/global.scss%22,%22../sass/admin/navbar.scss%22,%22../sass/admin/cart.scss%22,%22../sass/admin/topbar.scss%22,%22../sass/admin/content.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22;AAAA;EACI;EACA;EACA;EACA;;;AAGJ;EACI;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;;;AAEJ;EACI;EACA;EACA;EAEA;EACA;EACA;EACA;EACA;;;AC5BJ;EACI;EACA;EACA;EACA;;AAGQ;EACI;EACA;;;ACRZ;EACI;EACA;EACA;;AAEA;EACI;EACA;;AACA;EACI;;AAGJ;EACI;;AAGI;EACI;;;ACjBxB;EACI;EACA;;;ACHJ;EACI%22,%22file%22:%22all.css%22%7D */

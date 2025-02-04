@@ -4,11 +4,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --dark:72, 68, 61;
+  --vz-warning-rgb: 255, 190, 11;
+  --vz-warning-bg-subtle: #fff5da;
+  --color-main: #3577f1;
+  --color1:#eff2f7;
+  --bodybg-color: #e4e4e3;
+  --margin1: 72px;
 }
 /* scrollnbar */
 ::-webkit-scrollbar,
 ::-moz-scrollbar {
-  width: 4px;
+  width: 2px;
 }
 
 ::-webkit-scrollbar-thumb,
@@ -40,3 +47,6 @@
     --foreground: #ededed;
   }
 } */
+.flex-row-nowrap-between{
+  @apply flex flex-row flex-nowrap justify-between items-center justify-between;
+}

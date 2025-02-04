@@ -1,10 +1,11 @@
-"use client";
+'use client';
 import { Collapse, List, ListSubheader } from "@mui/material";
 import { ExpandLess, ExpandMore, Inbox, Dashboard, Category, Wallpaper, Tag, Tune, SpeakerNotes, List as ListIcon } from '@mui/icons-material';
 import Image from "next/image";
 import React from "react";
-import ItemButton from "@/public/helpers/template-mui/collapse/list/item";
+import ItemButton from "@/public/utils/helpers/template-mui/collapse/list/item";
 import { useRouter } from "next/navigation";
+import { PATHCONST } from "@/public/utils/constants";
 
 const AdminBar = ({ prop }: { prop: string }) => {
   const router = useRouter();
@@ -28,7 +29,7 @@ const AdminBar = ({ prop }: { prop: string }) => {
     setOpenComment(!openComment);
     closeOtherItem(4);
   };
-  const handle  = () => {
+  const handle = () => {
     router.push('/admin/dashboard?name=John&age=30');
   };
   function closeOtherItem(index: number) {
@@ -57,18 +58,18 @@ const AdminBar = ({ prop }: { prop: string }) => {
         break;
     }
   }
-  return <nav className="bg-white rounded-r-2xl p-2 h-screen">
-    <Image 
-    loading="lazy" 
-    src="/static/images/demo/1.png" 
-    width={300} 
-    height={100} 
-    className="max-w-full" 
-    alt="avatar" 
-    blurDataURL="data:/static/images/demo/1.png"
-    placeholder="blur"
+  return <nav className="bg-white rounded-r-2xl p-2 h-screen z-10">
+    <Image
+      loading="lazy"
+      src="/static/images/demo/1.png"
+      width={300}
+      height={100}
+      className="max-w-full"
+      alt="avatar"
+      blurDataURL="data:/static/images/demo/1.png"
+      placeholder="blur"
     />
-    <div className="scroll-bar max-w-full max-h-[80%] scroll-smooth overflow-y-auto">
+    <div className="scroll-bar max-w-full max-h-[80%] scroll-smooth overflow-y-auto z-10">
       <List
         sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
         component="nav"
@@ -82,7 +83,9 @@ const AdminBar = ({ prop }: { prop: string }) => {
         <ItemButton primary="Dashboard" iconbefore={<Dashboard />} onclick={handleClick} iconafter={openDashboard ? <ExpandLess /> : <ExpandMore />}></ItemButton>
         <Collapse in={openDashboard} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
-            <ItemButton primary="Dashboard" iconbefore={<Dashboard />} sxList={{ pl: 4 }}></ItemButton>
+            <ItemButton primary="Dashboard" iconbefore={<Dashboard />}
+              onclick={() => router.push(PATHCONST.ADMIN.DASHBOARD.INDEX)}
+              sxList={{ pl: 4 }}></ItemButton>
             {/* biến thể */}
           </List>
         </Collapse>

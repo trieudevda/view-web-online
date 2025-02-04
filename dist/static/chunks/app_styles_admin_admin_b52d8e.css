@@ -1,0 +1,31 @@
+/* [project]/app/styles/admin/admin.css [app-client] (css) */
+*, html, body {
+  font-size: 16px;
+  scrollbar-width: thin;
+  font-family: Roboto, sans-serif;
+  color: var(--foreground);
+}
+
+:not(h1, h2, h3, h4, h5, h6) {
+  color: #171717;
+}
+
+body {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  flex-basis: auto;
+  margin: 0;
+}
+
+nav .scroll-bar .nav-bar hr {
+  height: 3px;
+  color: #a1a19c;
+}
+
+.drawer-cart > .MuiDrawer-paper {
+  min-width: 350px;
+  max-height: 450px;
+}
+
+/*# sourceMappingURL=app_styles_admin_admin_b52d8e.css.map*/

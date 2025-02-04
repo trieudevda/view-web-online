@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack://[project]/app/styles/admin/admin.css"],"sourcesContent":["*,\nhtml,\nbody {\n  font-size: 16px;\n  scrollbar-width: thin;\n  font-family: \"Roboto\", sans-serif;\n  color: var(--foreground);\n}\n\n*:not(h1, h2, h3, h4, h5, h6) {\n  color: #171717;\n}\n\nbody {\n  display: flex;\n  flex-flow: row;\n  flex-wrap: nowrap;\n  flex-basis: auto;\n  margin: 0;\n}\nnav .scroll-bar .nav-bar hr {\n  height: 3px;\n  color: #a1a19c;\n}\n.drawer-cart > .MuiDrawer-paper {\n    min-width: 350px;\n  max-height: 450px;\n}\n"],"names":[],"mappings":"AAAA;;;;;;;AASA;;;;AAIA;;;;;;;;AAOA;;;;;AAIA"}},
+    {"offset": {"line": 29, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

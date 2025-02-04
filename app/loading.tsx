@@ -1,5 +1,7 @@
 "use client";
 
-export default function loading(){
-    return <h1>Loading.............</h1>
+import CircularProgress from "@mui/material/CircularProgress";
+
+export default function Loading(){
+    return <CircularProgress size="3rem" />
 }

@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "./styles/admin/all.css";
 import AdminBar from "@/public/components/adminbar/page";
-import React, { Suspense } from "react";
-import loading from "./loading";
-// import AdminBar from "/components/adminbar/page";
+import React from "react";
+import TopBar from "@/public/components/topbar/page";
 
 export const metadata: Metadata = {
   title: "Web Developer",
@@ -17,11 +16,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-
-      <body className="bg-gray-400">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+      </head>
+      <body className="min-w-full">
         <AdminBar prop="123"></AdminBar>
-          <main>{children}</main>
+        <main className="w-full relative">
+          <TopBar />
+          <div className="content-all">{children}</div>
+        </main>
       </body>
+
+
 
     </html>
   );
