@@ -7,6 +7,7 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -19,6 +20,8 @@ export default {
         color5: "#fff5da",
       },
       width:{
+        '30px': "30px",
+        '60px': "60px",
         '80px': "80px",
       },
       maxHeight: {

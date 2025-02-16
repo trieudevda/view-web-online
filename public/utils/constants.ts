@@ -1,6 +1,11 @@
 export const PATHS: Record<string, string> = {
   ADMIN: 'admin',
   DASHBOARD: 'dashboard',
+  PRODUCT: `product`,
+  // PRODUCT_DETAIL: `/product/:slug`,
+  // CART: `/cart`,
+  // CHECKOUT: `/checkout`,
+  // ORDERS: `/orders`,
   // ABOUT: `/about`,
   // CONTACT: `/contact`,
   // BLOG: `/blog`,
@@ -14,11 +19,14 @@ export const PATHCONST = {
       DETAIL: (slug: string) => `/DETAIL/${slug}`,
     },
     PRODUCT: {
-      INDEX: `/${PATHS.ADMIN}/product`,
-      CREATE: `/${PATHS.ADMIN}/product/create`,
-      UPDATE: (slug: string) => `/${PATHS.ADMIN}/product/update/${slug}`,
-      DELETE: (slug: string) => `/${PATHS.ADMIN}/product/delete/${slug}`,
-      DETAIL: (slug: string) => `/${PATHS.ADMIN}/product/detail/${slug}`,
+      INDEX: `/${PATHS.ADMIN}/${PATHS.PRODUCT}`,
+      CREATE: `/${PATHS.ADMIN}/${PATHS.PRODUCT}/create`,
+      UPDATE: (slug: string) => `/${PATHS.ADMIN}/${PATHS.PRODUCT}/update/${slug}`,
+      DELETE: (slug: string) => `/${PATHS.ADMIN}/${PATHS.PRODUCT}/delete/${slug}`,
+      DETAIL: (slug: string) => `/${PATHS.ADMIN}/${PATHS.PRODUCT}/detail/${slug}`,
+    },
+    NOTIFICATION: {
+      CHECKALL: `/${PATHS.ADMIN}/notification/checkall`,
     }
   },
 };

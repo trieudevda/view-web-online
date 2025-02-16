@@ -34,7 +34,7 @@
     ".next/types/**/*.ts",
     "next-env.d.ts",
     "dist/types/**/*.ts"
-  ],
+, "public/utils/helpers/generate/url.tsx", "public/utils/helpers/generate/w-h-element.js"  ],
   "exclude": [
     "node_modules"
   ]

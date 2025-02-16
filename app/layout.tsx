@@ -4,6 +4,7 @@ import "./styles/admin/all.css";
 import AdminBar from "@/public/components/adminbar/page";
 import React from "react";
 import TopBar from "@/public/components/topbar/page";
+import BreadcrumbsAdmin from "@/public/components/breadcrumbs/page";
 
 export const metadata: Metadata = {
   title: "Web Developer",
@@ -25,12 +26,11 @@ export default function RootLayout({
         <AdminBar prop="123"></AdminBar>
         <main className="w-full relative">
           <TopBar />
-          <div className="content-all">{children}</div>
+          <div className="content-all">
+            <BreadcrumbsAdmin/>
+            {children}</div>
         </main>
       </body>
-
-
-
     </html>
   );
 }

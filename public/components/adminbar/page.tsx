@@ -58,7 +58,7 @@ const AdminBar = ({ prop }: { prop: string }) => {
         break;
     }
   }
-  return <nav className="bg-white rounded-r-2xl p-2 h-screen z-10">
+  return <nav className="admin-bar bg-white rounded-r-2xl p-2 h-screen z-10">
     <Image
       loading="lazy"
       src="/static/images/demo/1.png"
@@ -92,7 +92,7 @@ const AdminBar = ({ prop }: { prop: string }) => {
         <ItemButton primary="Product" iconbefore={<Inbox />} onclick={handleClickProduct} iconafter={openProduct ? <ExpandLess /> : <ExpandMore />}></ItemButton>
         <Collapse in={openProduct} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
-            <ItemButton primary="Product" iconbefore={<Inbox />} sxList={{ pl: 4 }}></ItemButton>
+            <ItemButton primary="Product" iconbefore={<Inbox />} sxList={{ pl: 4 }} onclick={()=>router.push(PATHCONST.ADMIN.PRODUCT.INDEX)}></ItemButton>
             <ItemButton primary="Category" iconbefore={<Category />} sxList={{ pl: 4 }}></ItemButton>
             <ItemButton primary="Image" iconbefore={<Wallpaper />} sxList={{ pl: 4 }} ></ItemButton>
             <ItemButton primary="Tag" iconbefore={<Tag />} sxList={{ pl: 4 }} ></ItemButton>

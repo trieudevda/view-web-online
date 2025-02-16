@@ -10,7 +10,6 @@ import { Suspense } from 'react';
 import Loading from '@/app/loading';
 import Link from 'next/link';
 import { PATHCONST } from '../../constants';
-import { parse } from 'path';
 /*
 * data chứa: pathImg, productName, quality, price
 */
@@ -31,32 +30,29 @@ export default function MediaControlCard(props: any) {
                             alt="green iguana"
                             className='!w-[80px] !object-contain'
                         />
-                        <CardContent className="w-full grid grid-rows-2 grid-cols-[70%_30%]">
-                            <Typography component="div" variant="h6" className='text-tree-line leading-6'>
-                                {data.productName}
-                            </Typography>
-                            <Typography
-                                component={'div'}
-                                className='text-end'
-                            >
-                                <Tooltip title={"Xóa sản phẩm"}>
-                                    <DeleteOutline className='text-color1 cursor-pointer icon-delete-cart' onClick={deleteProduct} />
+                        <CardContent className="w-full">
+                            <div className='flex flex-row items-start gap-2'>
+                                <Tooltip title={data.productName}>
+                                    <Typography component="div" variant="h6" className='text-tree-line leading-6'>
+                                        {data.productName}
+                                    </Typography>
                                 </Tooltip>
-                            </Typography>
+                                <Typography
+                                    component={'div'}
+                                    className='text-end'
+                                >
+                                    <Tooltip title={"Xóa sản phẩm"}>
+                                        <DeleteOutline className='text-color1 cursor-pointer icon-delete-cart' onClick={deleteProduct} />
+                                    </Tooltip>
+                                </Typography>
+                            </div>
                             {/* <Button onClick={deleteProduct} size="small">X</Button> */}
                             <Typography
                                 variant="subtitle1"
                                 component="p"
                                 className='text-color1'
                             >
-                                Số lượng: {data.quality}
-                            </Typography>
-                            <Typography
-                                variant="subtitle1"
-                                component="p"
-                                className='text-color1 text-end'
-                            >
-                                {data.price} VNĐ
+                                {data.quality} x {data.price} VNĐ
                             </Typography>
                         </CardContent>
                     </Box>

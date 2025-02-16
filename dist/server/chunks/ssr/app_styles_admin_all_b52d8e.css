@@ -16,13 +16,16 @@ body {
   flex-wrap: nowrap;
   flex-basis: auto;
   margin: 0;
-  background-color: var(--bodybg-color);
+  overflow: hidden;
+  background-color: var(--bodybg-color) !important;
 }
 
 .text-tree-line {
   display: block;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   visibility: visible;
   text-overflow: ellipsis;
@@ -30,14 +33,40 @@ body {
   line-height: 1 !important;
 }
 
-nav {
+.btn-grid-data {
+  display: inline-flex;
+  -webkit-box-align: center;
+  justify-content: center;
+  position: relative;
+  user-select: none;
+  vertical-align: middle;
+  font-weight: 500;
+  letter-spacing: .02857em;
+  text-transform: uppercase;
+  min-width: 64px;
+  border: 0;
+  border-radius: 4px;
+  transition: background-color .25s cubic-bezier(.4, 0, .2, 1), box-shadow .25s cubic-bezier(.4, 0, .2, 1), border-color .25s cubic-bezier(.4, 0, .2, 1), color .25s cubic-bezier(.4, 0, .2, 1);
+  color: var(--variant-textColor);
+  background-color: var(--variant-textBg);
+  --variant-textColor: #1976d2;
+  --variant-outlinedColor: #1976d2;
+  --variant-outlinedBorder: #1976d280;
+  --variant-containedColor: #fff;
+  --variant-containedBg: #1976d2;
+  padding: 4px 5px;
+  font-size: .8125rem;
+}
+
+nav.admin-bar {
   position: relative;
   width: 100%;
-  max-width: 300px;
+  min-width: var(--w-navbar);
+  max-width: var(--w-navbar);
   background-color: #fff;
 }
 
-nav .scroll-bar .nav-bar hr {
+nav.admin-bar .scroll-bar .nav-bar hr {
   height: 3px;
   color: #a1a19c;
 }
@@ -65,13 +94,55 @@ nav .scroll-bar .nav-bar hr {
   color: var(--color-main);
 }
 
+.drawer-noti > .MuiDrawer-paper {
+  max-height: 450px;
+  border-radius: 1rem;
+  margin-top: var(--margin1);
+}
+
+.drawer-noti > .MuiDrawer-paper .noti-item {
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.drawer-noti > .MuiDrawer-paper .noti-item:hover {
+  background-color: var(--color1);
+}
+
+.drawer-noti > .MuiDrawer-paper .noti-item img {
+  width: var(--sizeImageCard);
+  height: var(--sizeImageCard);
+  object-fit: contain;
+  border: 1px solid var(--color-main);
+  border-radius: 50%;
+}
+
 .top-bar {
   height: var(--margin1);
   max-height: var(--margin1);
+  background-color: var(--bodybg-color);
+  z-index: 1;
 }
 
 .content-all {
-  margin-top: var(--margin1);
+  min-width: calc(100vw - var(--w-navbar));
+  max-width: calc(100vw - var(--w-navbar));
+  max-height: calc(100vh - var(--margin1));
+}
+
+.content-all .pagination-custom {
+  margin-right: 8px;
+}
+
+.content-all .pagination-custom button {
+  padding: 0;
+  min-width: 25px;
+  max-height: 25px;
+}
+
+main {
+  padding-top: var(--margin1);
+  overflow-y: auto;
 }
 
 /*# sourceMappingURL=app_styles_admin_all_b52d8e.css.map*/

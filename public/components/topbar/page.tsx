@@ -10,20 +10,19 @@ import {
 } from "@mui/icons-material";
 import CartToggleDrawer from "@/public/utils/helpers/cart/cart-toggleDrawer";
 import NotificationToggleDrawer from "@/public/utils/helpers/notification/notification-toggleDrawer";
-const TopBar = (prop: any) => {
+const TopBar = () => {
   const [cart, setCart] = React.useState(false);
-  const [lightMode, setLightMode] = React.useState("light");
+  const [lightMode, setLightMode] = React.useState('light');
   const [notification, setNotification] = React.useState(false);
-  React.useEffect(() => {
+  React.useEffect(()=>{
     const savedMode = localStorage.getItem("theme");
     if (savedMode) {
       setLightMode(savedMode as "light" | "dark");
-    }
-  },[]);
+    }    
+  },[])
   React.useEffect(() => {
-    if (lightMode) {
-      localStorage.setItem("theme", lightMode);
-    }
+    document.documentElement.setAttribute('data-theme', lightMode);
+    localStorage.setItem('theme', lightMode);
   }, [lightMode]);
   /*
   * Nếu không bọc trong ()=>, nó sẽ chạy ngay lập tức khi render, gây lỗi re-render vô hạn
@@ -69,7 +68,7 @@ const TopBar = (prop: any) => {
       <Drawer anchor={"right"} open={cart} onClose={() => toggleDrawer(setCart, false)()} className="drawer-cart" id="drawer-cart">
         {CartToggleDrawer(() => toggleDrawer(setCart, true))}
       </Drawer>
-      <Drawer anchor={"right"} open={notification} onClose={() => toggleDrawer(setNotification, false)()}>
+      <Drawer anchor={"right"} open={notification} onClose={() => toggleDrawer(setNotification, false)()}  className="drawer-noti" id="drawer-noti">
         {NotificationToggleDrawer(() => toggleDrawer(setNotification, true))}
       </Drawer>
     </div>

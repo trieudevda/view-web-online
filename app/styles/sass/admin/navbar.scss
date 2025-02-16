@@ -1,13 +1,17 @@
 nav {
-    position: relative;
-    width: 100%;
-    max-width: 300px;
-    background-color: white;
-    .scroll-bar {
-        .nav-bar {
-            hr {
-                height: 3px;
-                color: #a1a19c;
+    &.admin-bar {
+        position: relative;
+        width: 100%;
+        min-width: var(--w-navbar);
+        max-width: var(--w-navbar);
+        background-color: white;
+
+        .scroll-bar {
+            .nav-bar {
+                hr {
+                    height: 3px;
+                    color: #a1a19c;
+                }
             }
         }
     }
